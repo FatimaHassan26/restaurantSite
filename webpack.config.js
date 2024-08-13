@@ -15,11 +15,11 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/template.html'
+            template: 'src/template.html'
         }),
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
@@ -45,10 +45,6 @@ module.exports = {
           {
             test: /\.xml$/i,
             use: ['xml-loader'],
-          },
-          {
-            test: /\.html$/i,
-            loader: "html-loader",
           },
         ],
     },
